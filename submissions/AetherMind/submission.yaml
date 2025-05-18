@@ -1,0 +1,77 @@
+
+# Project metadata (required)
+
+# Basic project information
+project_name: AetherMind
+project_description: |
+  AetherMind is an intelligent DeFi (Decentralized Finance) navigator designed to help users 
+  explore, simulate, and understand DeFi strategies. It integrates with Metamask for wallet 
+  connectivity and leverages AI (Google's Gemini models via Genkit) to provide personalized 
+  strategy suggestions and detailed explanations. The platform aims to use real-time data 
+  from OKX DEX for market context and simulations.
+
+# Team details
+team_name: aethermind
+team_members:
+  - name: Prasannaran (techrevenger)
+    role: Developer
+    email: Prasannaverse13@gmail.com 
+    github_username: https://github.com/Prasannaverse13
+    github_project_repo: https://github.com/Prasannaverse13/AetherMind
+    youtube_demo_video: https://youtu.be/RIZwLQmfoNk
+    project_link: https://aether-mind-blond.vercel.app/
+
+# How you integrated OKX DEX API
+okx_dex_api_integration: |
+  AetherMind integrates with the OKX DEX API v5 to fetch real-time market data, 
+  enhancing the accuracy and relevance of its AI-powered DeFi strategy simulations and suggestions.
+
+  1.  **API Key Management**:
+      *   Securely stores OKX API Key, Secret Key, and Passphrase in an `.env` file.
+      *   These credentials are read by the server-side service (`src/services/okxService.ts`) responsible for API calls.
+
+  2.  **Dedicated Service (`src/services/okxService.ts`):**
+      *   A dedicated TypeScript module (`src/services/okxService.ts`) encapsulates all interactions 
+        with the OKX API.
+      *   **Authentication**: Implements HMAC-SHA256 signature generation as required by OKX API v5 
+        using Node.js's built-in `crypto` module. The `getOkxAuthHeaders` function constructs the 
+        necessary headers (`OK-ACCESS-KEY`, `OK-ACCESS-SIGN`, `OK-ACCESS-TIMESTAMP`, `OK-ACCESS-PASSPHRASE`).
+      *   **API Calls**: Uses the native `fetch` API to make GET requests to OKX endpoints.
+
+  3.  **Specific Data Fetched & Used:**
+      *   **Market Summary (`fetchOkxMarketSummary` function in `src/services/okxService.ts`):**
+          *   Fetches ticker data (last price, 24h volume, 24h change) for key trading pairs like 
+            `BTC-USDT`, `ETH-USDT`, and `OKT-USDT` from the `/api/v5/market/ticker` endpoint.
+          *   This data is then formatted into a concise string summary representing current market conditions.
+          *   This summary is retrieved by the `getOkxMarketConditions` server action in `src/lib/actions.ts`.
+          *   It is then passed to the AI models (Genkit flows in `src/ai/flows/`) to provide 
+            context for generating personalized strategy suggestions and detailed strategy explanations.
+      *   **Token Price (`fetchTokenPriceFromOKX` function in `src/services/okxService.ts`):**
+          *   Provides functionality to fetch the current USDT price for a given token symbol 
+            (e.g., "ETH" becomes "ETH-USDT") using the `/api/v5/market/ticker` endpoint.
+          *   This function is available for future integration into real-time portfolio valuation 
+            but is not currently used for displaying the total USD value of all user assets in the UI.
+
+  4.  **Usage in AI Simulations:**
+      *   The real-time market summary obtained from OKX DEX is crucial for the AI to:
+          *   Tailor strategy suggestions in `src/ai/flows/personalized-strategy-suggestions.ts` based on 
+            current market volatility and trends.
+          *   Provide relevant context within strategy explanations in `src/ai/flows/defi-strategy-explanation.ts`, 
+            especially concerning how a strategy might perform or what to consider under the observed OKX DEX conditions.
+
+  5.  **Error Handling**: Basic error handling is in place within `src/services/okxService.ts` for API requests 
+      to manage network issues or unexpected responses from the OKX API.
+
+  This integration ensures that AetherMind's AI insights are grounded in actual market data from 
+  OKX DEX, making the simulations and advice more practical for users.
+
+What GenAI features did you build?
+ gen_ai_features: |
+   - AI-Powered DeFi Strategy Suggestions: ...
+   - Contextual DeFi Strategy Explanations: ...
+
+What challenges did you face?
+challenges_faced: |
+   - Integrating real-time DEX data effectively...
+   - Ensuring AI responses were accurate and easy to understand...
+
