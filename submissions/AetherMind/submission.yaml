@@ -17,6 +17,9 @@ team_members:
     role: Developer
     email: Prasannaverse13@gmail.com 
     github_username: https://github.com/Prasannaverse13
+    github_project_repo: https://github.com/Prasannaverse13/AetherMind
+    youtube_demo_video: https://youtu.be/RIZwLQmfoNk
+    project_link: https://aether-mind-blond.vercel.app/
 
 # How you integrated OKX DEX API
 okx_dex_api_integration: |
@@ -62,17 +65,13 @@ okx_dex_api_integration: |
   This integration ensures that AetherMind's AI insights are grounded in actual market data from 
   OKX DEX, making the simulations and advice more practical for users.
 
-# What GenAI features did you build?
-# gen_ai_features: |
-#   - AI-Powered DeFi Strategy Suggestions: ...
-#   - Contextual DeFi Strategy Explanations: ...
+What GenAI features did you build?
+ gen_ai_features: |
+   - AI-Powered DeFi Strategy Suggestions: ...
+   - Contextual DeFi Strategy Explanations: ...
 
-# What challenges did you face?
-# challenges_faced: |
-#   - Integrating real-time DEX data effectively...
-#   - Ensuring AI responses were accurate and easy to understand...
+What challenges did you face?
+challenges_faced: |
+   - Integrating real-time DEX data effectively...
+   - Ensuring AI responses were accurate and easy to understand...
 
-# What are your next steps?
-# next_steps: |
-#   - Implement full ERC20 token discovery...
-#   - Enhance simulation accuracy with deeper DEX integration...
