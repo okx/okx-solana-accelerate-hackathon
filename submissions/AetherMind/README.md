@@ -173,4 +173,28 @@ AetherMind utilizes Genkit, an open-source framework, to integrate with Google's
     *   More sophisticated state management for recent simulations (e.g., persistent storage beyond `localStorage` if needed).
     *   Enhanced UI/UX for data visualization (e.g., charts for portfolio breakdown).
 
-This README provides a comprehensive overview of AetherMind.
+## Screenshots:
+
+![Screenshot (1215)](https://github.com/user-attachments/assets/e04942ff-f708-4e9c-9e31-a8308b58d6d8)
+
+![Screenshot (1218)](https://github.com/user-attachments/assets/ef4ba9fc-8e4c-4d0e-94f6-d268577612dd)
+
+![Screenshot (1219)](https://github.com/user-attachments/assets/c06a4384-dbca-4901-8b0a-6a6f907dd528)
+
+![Screenshot (1220)](https://github.com/user-attachments/assets/85e92d2f-5f9c-4a24-bff4-9e1fbcb3e369)
+
+![Screenshot (1223)](https://github.com/user-attachments/assets/83354072-0d61-4552-a48e-f0206b743efb)
+
+![Screenshot (1224)](https://github.com/user-attachments/assets/9576ea2a-18d6-485d-9432-57b515e6f14a)
+
+![Screenshot (1225)](https://github.com/user-attachments/assets/ef111bfa-e9c6-476e-b0b1-7d4e6b24357d)
+
+![Screenshot (1226)](https://github.com/user-attachments/assets/eb39bd43-b4dd-4eee-a950-9517f5ad79a8)
+
+
+
+
+
+
+
+
